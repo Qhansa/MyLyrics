@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		5789BFBB2827DD7300575E95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFBA2827DD7300575E95 /* AppDelegate.swift */; };
 		5789BFBD2827DD7300575E95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFBC2827DD7300575E95 /* SceneDelegate.swift */; };
-		5789BFBF2827DD7300575E95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFBE2827DD7300575E95 /* ViewController.swift */; };
+		5789BFBF2827DD7300575E95 /* LyricDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFBE2827DD7300575E95 /* LyricDetailVC.swift */; };
 		5789BFC22827DD7300575E95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5789BFC02827DD7300575E95 /* Main.storyboard */; };
 		5789BFC52827DD7300575E95 /* MyLyrics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFC32827DD7300575E95 /* MyLyrics.xcdatamodeld */; };
 		5789BFC72827DD7400575E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5789BFC62827DD7400575E95 /* Assets.xcassets */; };
 		5789BFCA2827DD7400575E95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5789BFC82827DD7400575E95 /* LaunchScreen.storyboard */; };
+		5789BFD22827EF0300575E95 /* LyricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFD12827EF0300575E95 /* LyricCell.swift */; };
+		5789BFD42827EF2500575E95 /* LyricsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFD32827EF2500575E95 /* LyricsTableView.swift */; };
+		5789BFD62827F1D800575E95 /* Lyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFD52827F1D800575E95 /* Lyric.swift */; };
+		5789BFD92827FFE700575E95 /* Lyric+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFD72827FFE700575E95 /* Lyric+CoreDataClass.swift */; };
+		5789BFDA2827FFE700575E95 /* Lyric+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789BFD82827FFE700575E95 /* Lyric+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5789BFB72827DD7300575E95 /* MyLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5789BFBA2827DD7300575E95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5789BFBC2827DD7300575E95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5789BFBE2827DD7300575E95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5789BFBE2827DD7300575E95 /* LyricDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricDetailVC.swift; sourceTree = "<group>"; };
 		5789BFC12827DD7300575E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5789BFC42827DD7300575E95 /* MyLyrics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLyrics.xcdatamodel; sourceTree = "<group>"; };
 		5789BFC62827DD7400575E95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5789BFC92827DD7400575E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5789BFCB2827DD7400575E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5789BFD12827EF0300575E95 /* LyricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricCell.swift; sourceTree = "<group>"; };
+		5789BFD32827EF2500575E95 /* LyricsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsTableView.swift; sourceTree = "<group>"; };
+		5789BFD52827F1D800575E95 /* Lyric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyric.swift; sourceTree = "<group>"; };
+		5789BFD72827FFE700575E95 /* Lyric+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lyric+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5789BFD82827FFE700575E95 /* Lyric+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lyric+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,13 @@
 		5789BFB92827DD7300575E95 /* MyLyrics */ = {
 			isa = PBXGroup;
 			children = (
+				5789BFDB2827FFF700575E95 /* Model */,
 				5789BFBA2827DD7300575E95 /* AppDelegate.swift */,
 				5789BFBC2827DD7300575E95 /* SceneDelegate.swift */,
-				5789BFBE2827DD7300575E95 /* ViewController.swift */,
+				5789BFBE2827DD7300575E95 /* LyricDetailVC.swift */,
+				5789BFD52827F1D800575E95 /* Lyric.swift */,
+				5789BFD32827EF2500575E95 /* LyricsTableView.swift */,
+				5789BFD12827EF0300575E95 /* LyricCell.swift */,
 				5789BFC02827DD7300575E95 /* Main.storyboard */,
 				5789BFC62827DD7400575E95 /* Assets.xcassets */,
 				5789BFC82827DD7400575E95 /* LaunchScreen.storyboard */,
@@ -68,6 +82,15 @@
 				5789BFC32827DD7300575E95 /* MyLyrics.xcdatamodeld */,
 			);
 			path = MyLyrics;
+			sourceTree = "<group>";
+		};
+		5789BFDB2827FFF700575E95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5789BFD72827FFE700575E95 /* Lyric+CoreDataClass.swift */,
+				5789BFD82827FFE700575E95 /* Lyric+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5789BFBF2827DD7300575E95 /* ViewController.swift in Sources */,
+				5789BFBF2827DD7300575E95 /* LyricDetailVC.swift in Sources */,
 				5789BFC52827DD7300575E95 /* MyLyrics.xcdatamodeld in Sources */,
 				5789BFBB2827DD7300575E95 /* AppDelegate.swift in Sources */,
+				5789BFD92827FFE700575E95 /* Lyric+CoreDataClass.swift in Sources */,
+				5789BFD22827EF0300575E95 /* LyricCell.swift in Sources */,
 				5789BFBD2827DD7300575E95 /* SceneDelegate.swift in Sources */,
+				5789BFD62827F1D800575E95 /* Lyric.swift in Sources */,
+				5789BFDA2827FFE700575E95 /* Lyric+CoreDataProperties.swift in Sources */,
+				5789BFD42827EF2500575E95 /* LyricsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
