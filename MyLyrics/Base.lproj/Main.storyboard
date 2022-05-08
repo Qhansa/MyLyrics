@@ -66,10 +66,13 @@
                     <navigationItem key="navigationItem" title="My Lyrics" id="7rc-5k-9SY">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="8TN-Dk-fkv">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="OVG-aA-PoU"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="newLyric" id="OVG-aA-PoU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="editLyric" id="lm6-rQ-0nl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oP3-kB-pQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="-1346" y="46"/>
         </scene>
-        <!--New Lyric-->
+        <!--Lyric Details-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LyricDetailVC" customModule="MyLyrics" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,14 +102,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lyric Title" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyE-qR-uhH">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lyric Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyE-qR-uhH">
                                 <rect key="frame" x="16" y="113" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type your ideas (e.g., Intro, Verse, Pre-Chorus, Chorus, Bridge and Outro) here..." translatesAutoresizingMaskIntoConstraints="NO" id="llm-kk-JLf">
-                                <rect key="frame" x="16" y="155" width="358" height="611"/>
+                                <rect key="frame" x="16" y="155" width="358" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -125,6 +128,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Delete">
                                                 <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="deleteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="saN-o2-siK"/>
+                                            </connections>
                                         </button>
                                     </barButtonItem>
                                 </items>
@@ -133,7 +139,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Lyric" id="9LS-US-HOK">
+                    <navigationItem key="navigationItem" title="Lyric Details" id="9LS-US-HOK">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="NhD-dA-akd">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="b1x-Fl-MvJ"/>
@@ -141,6 +147,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="aLt-Sv-CaH" id="kfd-XB-BEi"/>
                         <outlet property="lyricIdeasTextView" destination="llm-kk-JLf" id="cAT-go-AOP"/>
                         <outlet property="lyricTitleTextField" destination="NyE-qR-uhH" id="97z-PE-iPp"/>
                         <outlet property="saveButton" destination="NhD-dA-akd" id="VfT-hN-Mlx"/>
@@ -151,6 +158,9 @@
             <point key="canvasLocation" x="356.92307692307691" y="45.497630331753555"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lm6-rQ-0nl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
